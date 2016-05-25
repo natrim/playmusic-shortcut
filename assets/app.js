@@ -115,7 +115,7 @@ chrome.commands.onCommand.addListener(function (command) {
     case 'PLAY-PAUSE-MK':
         //PLAY_MK
         webview.executeScript({
-            code: "if ( document.querySelectorAll('#player-bar-play-pause').length > 0 ) Array.prototype.slice.call(document.querySelectorAll('#player_control_play,button.control-play')).forEach(function(el) { el.click(); }); else Array.prototype.slice.call(document.querySelectorAll('#player_control_pause,button.control-pause')).forEach(function(el) { el.click(); });"
+            code: "Array.prototype.slice.call(document.querySelectorAll('#player-bar-play-pause')).forEach(function(el) { el.click(); });"
         });
         break;
     case 'STOP-MK':
