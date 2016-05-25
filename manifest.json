@@ -1,0 +1,64 @@
+{
+  "manifest_version": 2,
+  "name": "Play Music Shortcut",
+  "description": "Shortcut to Google Play Music in window as app with media keys support",
+  "version": "1.0.0",
+
+  "minimum_chrome_version": "38",
+  "author": "Natrim",
+
+  "icons": {
+    "16": "assets/icon_16.png",
+    "32": "assets/icon_32.png",
+    "64": "assets/icon_64.png",
+    "128": "assets/icon_128.png"
+  },
+
+  "offline_enabled": false,
+
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "notifications",
+    "webview",
+    "*://play.gooogle.com/"
+  ],
+
+  "commands": {
+    "NEXT-MK": {
+      "description": "Next Key",
+      "global": true,
+      "suggested_key": {
+        "default": "MediaNextTrack"
+      }
+    },
+    "PLAY-PAUSE-MK": {
+      "description": "Play/Pause Key",
+      "global": true,
+      "suggested_key": {
+        "default": "MediaPlayPause"
+      }
+    },
+    "PREV-MK": {
+      "description": "Prev Key",
+      "global": true,
+      "suggested_key": {
+        "default": "MediaPrevTrack"
+      }
+    },
+    "STOP-MK": {
+      "description": "Stop Key",
+      "global": true,
+      "suggested_key": {
+        "default": "MediaStop"
+      }
+    }
+  },
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
+  }
+}
